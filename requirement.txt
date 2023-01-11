@@ -1,0 +1,8 @@
+django==3.2
+django-cors-headers==3.13.0
+django-graphql-jwt==0.3.4  
+graphene==3.2.1  
+graphene-django==3.0.0  
+graphql-core==3.2.3
+graphql-relay==3.2.0 
+PyJWT==2.6.0 

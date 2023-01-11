@@ -1,0 +1,95 @@
+
+
+ mutation TokenAuth($username: String!, $password: String!) {
+   tokenAuth(username: $username, password: $password) {
+     token
+     payload
+     refreshExpiresIn
+   }
+ }
+
+ query {
+   users{
+     email
+     lastName
+     lastLogin
+   }
+ }
+
+ query {
+   posts{
+     id
+     likes {
+       id
+     }
+     title
+     content
+   }
+ }
+
+
+ mutation {
+   createPost(content:"dfasssdff",title:"sdssssdd"){
+     post{
+       id
+       title
+       likes {
+         id
+       }
+     }
+   }
+ }
+
+ mutation {
+   createUser(username: "sdsd", password: "sdsd", email: "user@example.com") {
+     user {
+       id
+       username
+       email
+     }
+   }
+ }
+
+
+ mutation {
+   updateUser(id: 4, username: "new", password: "password", email: "new@example.com") {
+     user {
+       id
+       username
+       email
+     }
+   }
+ }
+
+ mutation {
+   deleteUser(id: 4) {
+     success
+   }
+ }
+
+
+
+ mutation {
+   unlikePost(id:4){
+     post{
+       id
+       likes {
+         id
+       }
+       title
+     }
+   }
+ }
+
+
+ mutation {
+   likePost(id:4){
+     post{
+       id
+       likes {
+         id
+       }
+       title
+     }
+   }
+ }
